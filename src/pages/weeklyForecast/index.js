@@ -3,7 +3,7 @@ import { weatherApi } from "../../api";
 import Card from "../../components/card/card";
 import DoughnutChurts from "../../components/charts/Doughnut";
 import { CurrentCityContext } from "../../components/context";
-import style from './city.module.css'
+import style from './weekly.module.css'
 import CircularIndeterminate from "../../components/loader";
 
 const WeeklyForecast = () => {
