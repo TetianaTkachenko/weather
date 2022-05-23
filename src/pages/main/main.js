@@ -21,8 +21,10 @@ export default function Asynchronous() {
     const [options, setOptions] = useState([]);
     const loading = open && options.length === 0;
     const [searchQuery, setSearchQuery] = useState(null)
+    const [woeid, setWoeid] = useState('')
     const [, dispatch] = useContext(CurrentCityContext)
     const navigate = useNavigate()
+
     useEffect(() => {
         let active = true;
 
@@ -52,10 +54,18 @@ export default function Asynchronous() {
         }
     }, [open]);
 
-    const handleChange = ({ woeid }) => {
+    useEffect(() => {
+        if (!woeid) {
+            return
+        }
         dispatch({ type: 'SET_CURRENT_CITY_ID', payload: woeid })
         navigate(`/api/location/${woeid}`)
+    }, [woeid, dispatch, navigate])
+
+    const handleChange = ({ woeid }) => {
+        setWoeid(woeid)
     }
+
     return (
         <div>
             <div className={style.wraper}>
@@ -109,104 +119,5 @@ export default function Asynchronous() {
                 </div>
             </div>
         </div>
-
     );
 }
-
-
-/*import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
-import { useState, useEffect } from 'react';
-import { weatherApi } from '../../api';
-import style from './main.module.css'
-import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
-import { CurrentCityContext } from '../../components/context';
-import { Box } from '@mui/material';
-
-export default function Main() {
-    const navigate = useNavigate()
-    const [search, setSearch] = useState('')
-    const [responseListCitys, setResponseListCitys] = useState([])
-    const [woeid, setWoeid] = useState('')
-    const [, dispatch] = useContext(CurrentCityContext)
-    console.log('weo', woeid)
-    console.log('ser', search)
-    console.log('responseListCitys', responseListCitys.map(item => item.title))
-    useEffect(() => {
-        if (!search) {
-            return
-        }
-        weatherApi.getLocationsList(search)
-            .then(res => {
-                setResponseListCitys(res.data)
-                setWoeid(res.data.map(id => id.woeid))
-                dispatch({ type: 'SET_CURRENT_CITY_ID', payload: res.data })
-            })
-    }, [search, dispatch])
-
-    const handleClick = () => {
-        navigate(`/api/location/${woeid}`)
-        setWoeid(null)
-    }
-
-    const flatProps = {
-        options: responseListCitys.map((option) => (option.title))
-    }
-
-    return (
-        <div>
-            <div className={style.wraper}>
-                <div className={style.containner}>
-                    <Stack spacing={1} sx={{ width: 600 }}>
-                        <Autocomplete
-                            {...flatProps}
-                            id="flat-demo"
-                            options={responseListCitys}
-                            getOptionLabel={responseListCitys.map((option) => (option.title))}
-                            isOptionEqualToValue={(option, value) =>
-                                option.title === value.title
-                            }
-                            noOptionsText={'We did not find your city'}
-                            key={option => option.id}
-                            blurOnSelect='mouse'
-                            //onChange={e => setSearch(e.target.value)}
-
-                            onChange={(blurOnSelect) => {
-                                if (blurOnSelect) {
-                                    handleClick()
-                                }
-                            }}
-                            renderOption={(prop, responseListCitys) => (
-                                <Box component='li' {...prop} >
-                                    {responseListCitys.title}
-                                </Box>
-                            )}
-                            renderInput={(params) => (
-                                <TextField
-                                    {...params}
-                                    label="Your city"
-                                    variant="standard"
-                                    value={search}
-                                    onChange={e => setSearch(e.target.value)}
-                                />
-                            )}
-                        />
-                    </Stack>
-                    <div className={style.btnSend}>
-                        <Button
-                            onClick={handleClick}
-                            variant="contained"
-                            endIcon={<SendIcon />}>
-                            Search
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-} */

@@ -1,0 +1,57 @@
+.wraper {
+    margin: 35px 80px;
+}
+
+.flexRow {
+    display: flex;
+    justify-content: space-around;
+}
+.flexBox {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.flexColForData {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerForDate {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 5%), 0 10px 10px rgb(0 0 0 / 10%);
+    margin-right: 70px;
+}
+.fontBoldRed {
+    margin-left: 20px;
+    font-size: 35px;
+    color: red;
+}
+
+.fontBoldBlue {
+    margin-left: 20px;
+    font-size: 35px;
+    color: blue;
+}
+
+p {
+    color: gray;
+}
+
+hr {
+    width: 100%;
+}
+.mdImage {
+    width: 100px;
+}

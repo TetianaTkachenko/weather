@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from 'react'
 
 const initialState = {
     woeid: null,
-    currentCityData: null
+    currentDate: null
 }
 
 export const reducer = (state, action) => {
@@ -12,10 +12,10 @@ export const reducer = (state, action) => {
                 ...state,
                 woeid: action.payload
             }
-        case 'SET_CURRENT_CITY_DATA':
+        case 'SET_CURRENT_DATE':
             return {
                 ...state,
-                currentCityData: action.payload
+                currentDate: action.payload
             }
         default:
             return state
