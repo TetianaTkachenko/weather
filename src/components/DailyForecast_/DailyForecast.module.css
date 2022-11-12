@@ -1,0 +1,147 @@
+.container {
+    margin: 0 50px;
+}
+
+.wrapper {
+    width: 400px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.headerCard {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #373333;
+}
+
+.mediumPartCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 60px 0;
+}
+
+.mediumPartCard__mainData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dataContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.averageTemperature {
+    margin: 0;
+    font-size: 70px;
+    font-weight: 500;
+    color: #393535;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.symbol {
+    position: absolute;
+    font-size: 25px;
+    margin: 0;
+    top: -8px;
+    right: -20px;
+    font-family: sans-serif;
+}
+
+.smallDescription {
+    color: #171616;
+    font-size: 13px;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.largeIcon {
+    height: 100px;
+}
+
+/* Weather backgroungs */
+.weather_01d {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)
+}
+
+.weather_01n {
+    background: linear-gradient(0.25turn, #647ba5, #394c9b)
+}
+
+.weather_02d {
+    background: linear-gradient(0.65turn, rgb(255 255 255), rgba(255, 229, 81, 0.56), rgba(226, 163, 24, 0.9))
+}
+
+.weather_02n {
+    background: linear-gradient(0.5turn, #a5abc4, #647ba5, #394c9b)
+}
+
+.weather_03d {
+    background: linear-gradient(rgb(201 214 221), rgb(63 64 66)) 
+}
+
+.weather_03n {
+    background: linear-gradient(0.25turn, #7a7979, #4a5f84, #283671)
+}
+
+.weather_04d {
+    background: linear-gradient(rgb(201 214 221), rgb(63 64 66))
+}
+
+.weather_04n {
+    background: linear-gradient(0.5turn, #605f5f, #c4c4c5, #794608)
+}
+
+.weather_09d {
+    background: linear-gradient(rgb(16 154 228 / 41%), rgb(1 35 64 / 96%))
+}
+
+.weather_09n {
+    background: linear-gradient(0.61turn, #ececec, #5e637e, #1a325f)
+}
+
+.weather_10d {
+    background: linear-gradient(rgb(16 154 228 / 41%), rgb(1 35 64 / 96%))
+}
+
+.weather_10n { 
+    background: linear-gradient(0.61turn, #ececec, #a4a5ab, #1a325f)
+}
+
+.weather_11d { 
+    background: linear-gradient(217deg, rgb(114 86 4 / 94%), rgb(0 0 0 / 0%) 70.71%), linear-gradient(110deg, rgb(24 25 24), rgb(150 150 150) 70.71%), linear-gradient(336deg, rgb(81 81 85 / 80%), rgba(0,0,255,0) 70.71%)
+}
+
+.weather_11n {
+    background: linear-gradient(217deg, rgb(114 86 4 / 94%), rgb(0 0 0 / 0%) 70.71%), linear-gradient(110deg, rgb(24 25 24), rgb(150 150 150) 70.71%), linear-gradient(336deg, rgb(81 81 85 / 80%), rgba(0,0,255,0) 70.71%)
+}
+
+.weather_13d {
+    background: linear-gradient(rgb(224 223 222), rgb(149 204 251))
+}
+
+.weather_13n {
+    background: linear-gradient(rgb(15 66 135), rgb(191 225 255))
+}
+
+.weather_50d {
+    background: linear-gradient(0.61turn, #fafafa, #aaaaaa, #515151)
+}
+
+.weather_50n {
+    background: linear-gradient(0.61turn, #ececec, #a4a5ab, #32374e)
+}

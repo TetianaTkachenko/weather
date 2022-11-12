@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from './routes'
-import Header from './components/header/header';
+import Header from './components/Header/Header';
 import { CurrentCityProvider } from './components/context';
 
 const App = () => {

@@ -1,21 +1,15 @@
 import React, { createContext, useReducer } from 'react'
 
 const initialState = {
-    woeid: null,
-    currentDate: null
+    searchQuery: ''
 }
 
 export const reducer = (state, action) => {
     switch (action.type) {
-        case 'SET_CURRENT_CITY_ID':
+        case 'SET_SEARCH_QUERY':
             return {
                 ...state,
-                woeid: action.payload
-            }
-        case 'SET_CURRENT_DATE':
-            return {
-                ...state,
-                currentDate: action.payload
+                searchQuery: action.searchQuery
             }
         default:
             return state
