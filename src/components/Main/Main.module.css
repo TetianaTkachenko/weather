@@ -6,9 +6,13 @@
     align-items: center;
     margin-top: 70px;
 }
-.containner {
+
+.mainContainer {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+}
+.container {
+    display: flex;
     align-items: flex-end;
 }
 .btnSend {
